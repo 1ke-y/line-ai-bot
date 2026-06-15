@@ -1,8 +1,9 @@
+import os
 import requests
 
 # LINE Messaging APIの設定
 # ⚠️ 下の "" の中に、ステップ1でコピーした長いアクセストークンを貼り付けてください
-LINE_TOKEN ="MY_ACCESS_TOKEN_HERE"
+LINE_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
 URL = "https://api.line.me/v2/bot/message/broadcast"
 
 headers = {
